@@ -1,0 +1,79 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^api/articles$ index.php?action=articleApi [L]
+
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^api/categories$ index.php?action=categorieApi [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^articles/add$ index.php?action=addArticle [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^articles/add$ index.php?action=addArticlePost [L]
+
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^articles/edit/([0-9]+)$ index.php?action=editArticle&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^articles/edit/([0-9]+)$  index.php?action=editArticlePost&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^articles/delete/([0-9]+)$  index.php?action=delteArticlePost&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^articles/([0-9]*)$ index.php?action=articles&id=$1 [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^categories/edit/([0-9]+)$ index.php?action=editCategorie&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^categories/edit/([0-9]+)$ index.php?action=editCategoriePost&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^categories/delete/([0-9]+)$ index.php?action=deleteCategoriePost&id=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^categories/([0-9]+)$ index.php?action=categories&id=$1 [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^categories/add$ index.php?action=addCategorie [L]
+
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^categories/add$ index.php?action=addCategoriePost [L]
+
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^categories/(.*)$ index.php?action=categoriesCat&name=$1 [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^login$ index.php?action=login [L]
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^login$ index.php?action=loginPost [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^register$ index.php?action=register [L]
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^register$ index.php?action=registerPost [L]
+
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^logout$ index.php?action=logout [L]
+
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteRule ^forbidden$ index.php?action=error403 [L]
+
+
+
+
+RewriteRule assets/(.*)$ assets/$1 [L]
+RewriteRule [^index.php]  index.php?action=erreur

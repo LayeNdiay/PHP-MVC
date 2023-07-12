@@ -1,0 +1,139 @@
+* {
+    padding: 0%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+}
+
+header {
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+.site-name {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #8f8b8b1f;
+    color: #333333;
+    padding: 50px;
+}
+
+.nav ul {
+    background-color: #476dd8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav ul li {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+.nav ul li:hover  {
+    background-color: #faf5f5c5;
+}
+
+.btn-submit,.admin-privileges  button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.nav ul li a ,.btn-submit {
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav ul li a:hover ,.btn-submit:hover {
+    color: #333333;
+}
+
+.active {
+    background-color: #faf5f5c5;
+}
+
+.news {
+    margin: 20px 50px;
+    padding: 0 50px;
+    background-color: #faf5f5c5;
+    border-radius: 10px;
+}
+
+.news:hover {
+    background-color: #8f8b8b1f;
+
+}
+
+.news-title {
+    display: flex;
+    align-items: center;
+}
+
+.news-title h2 {
+    padding: 20px 0;
+    width: 100%;
+    text-transform: capitalize;
+
+}
+
+.news-content {
+    text-justify: newspaper;
+    text-align: justify;
+
+}
+.alert-success {
+    padding: 10px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 50px;
+  }
+  .custom-select{
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  }
+
+
+.admin-privileges{
+    margin-top: 5px;
+    float: right;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  top: 0;
+  margin-left: 10px;
+}
+
+.header{
+    margin-left: 0;
+}
